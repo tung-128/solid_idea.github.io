@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服務項目 - 瀛設計工作室</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* 保持與其他頁面相同的基礎樣式 */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #e67e22;
+            --text-color: #2d3748;
+            --light-bg: #f8fafc;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        /* 導航欄樣式 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(44, 62, 80, 0.7);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* 服務頁面特定樣式 */
+        .services-header {
+            height: 50vh;
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)),
+                        url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding-top: 60px;
+        }
+
+        .hero-content {
+            color: var(--white);
+        }
+
+        .hero-title {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            opacity: 0.9;
+        }
+
+        .services-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 5%;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .service-description {
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .service-features li:before {
+            content: "•";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .learn-more {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--accent-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .learn-more:hover {
+            background: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .service-title {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="logo">瀛設計工作室</a>
+            <div class="nav-links">
+                <a href="index.html">首頁</a>
+                <a href="about.html">關於我們</a>
+                <a href="services.html" class="active">服務項目</a>
+                <a href="portfolio.html">作品集</a>
+                <a href="contact.html">聯絡我們</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="services-header">
+        <div class="hero-content">
+            <h1 class="hero-title">我們的服務</h1>
+            <p class="hero-subtitle">專業設計，量身定制</p>
+        </div>
+    </header>
+
+    <main class="services-content">
+        <div class="service-grid">
+            <!-- 住宅設計 -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?q=80&w=1000" alt="住宅設計" class="service-image">
+                <div class="service-content">
+                    <h2 class="service-title">住宅設計</h2>
+                    <p class="service-description">為您打造舒適宜人的居住空間，融合功能性與美學設計。</p>
+                    <ul class="service-features">
+                        <li>空間規劃與優化</li>
+                        <li>傢具搭配建議</li>
+                        <li>照明設計</li>
+                        <li>色彩計劃</li>
+                    </ul>
+                    <a href="contact.html" class="learn-more">了解更多</a>
+                </div>
+            </div>
+
+            <!-- 商業空間 -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000" alt="商業空間" class="service-image">
+                <div class="service-content">
+                    <h2 class="service-title">商業空間</h2>
+                    <p class="service-description">創造具有品牌特色的商業環境，提升企業形象。</p>
+                    <ul class="service-features">
+                        <li>店面設計</li>
+                        <li>辦公室規劃</li>
+                        <li>展示空間設計</li>
+                        <li>品牌形象整合</li>
+                    </ul>
+                    <a href="contact.html" class="learn-more">了解更多</a>
+                </div>
+            </div>
+
+            <!-- 軟裝設計 -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000" alt="軟裝設計" class="service-image">
+                <div class="service-content">
+                    <h2 class="service-title">軟裝設計</h2>
+                    <p class="service-description">通過精心挑選的傢具、飾品為空間注入生命力。</p>
+                    <ul class="service-features">
+                        <li>傢具採購建議</li>
+                        <li>布藝搭配</li>
+                        <li>裝飾品配置</li>
+                        <li>整體風格規劃</li>
+                    </ul>
+                    <a href="contact.html" class="learn-more">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
