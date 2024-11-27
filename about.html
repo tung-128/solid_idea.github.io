@@ -107,6 +107,10 @@
             padding: 4rem 5%;
         }
 
+        .about-section {
+            margin-bottom: 4rem;
+        }
+
         .award-section {
             margin: 4rem 0;
             background: var(--white);
@@ -119,12 +123,30 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
-            align-items: start;
             padding: 2rem;
         }
 
         .award-info {
             padding: 2rem;
+        }
+
+        .award-info ul {
+            list-style-type: none;
+            margin: 1rem 0;
+        }
+
+        .award-info ul li {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .award-info ul li:before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
         }
 
         .award-title {
@@ -143,10 +165,9 @@
         .award-image {
             width: 100%;
             height: 300px;
-            object-fit: contain;
+            object-fit: cover;
             border-radius: 8px;
             box-shadow: var(--shadow);
-            background-color: #f8f8f8;
         }
 
         .section-title {
@@ -180,12 +201,55 @@
             border-radius: 12px;
             box-shadow: var(--shadow);
             text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
         }
 
         .feature-icon {
             font-size: 2.5rem;
             color: var(--accent-color);
             margin-bottom: 1rem;
+        }
+
+        .feature-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 4rem 2rem;
+            background: var(--light-bg);
+            border-radius: 12px;
+        }
+
+        .cta-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .cta-button i {
+            margin-right: 0.5rem;
         }
 
         @media (max-width: 768px) {
@@ -207,6 +271,32 @@
 
             .hero-subtitle {
                 font-size: 1.4rem;
+            }
+
+            .award-info {
+                padding: 1rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .award-title {
+                font-size: 1.3rem;
             }
         }
     </style>
@@ -235,4 +325,64 @@
     <main class="about-content">
         <section class="about-section">
             <h2 class="section-title">我們的理念</h2>
-            <p>瀛設計工作室致力於為客戶提供高品質、創新的室內設計解決方案。我們深信，優秀的設計不僅要美觀，更要實用、符合客戶的生活方式和需求。作為一家以客戶為中心的設計工作室，我們採用靈活的營
+            <p>瀛設計工作室致力於為客戶提供高品質、創新的室內設計解決方案。我們深信，優秀的設計不僅要美觀，更要實用、符合客戶的生活方式和需求。作為一家以客戶為中心的設計工作室，我們採用靈活的營運模式，不設實體店面，以降低營運成本，把節省下來的費用回饋給我們的客戶。</p>
+        </section>
+
+        <section class="award-section">
+            <div class="award-content">
+                <div class="award-info">
+                    <h2 class="award-title">
+                        <i class="fas fa-trophy"></i>
+                        2021年香港專業室內設計大獎
+                    </h2>
+                    <p>我們很榮幸能獲得2021年香港專業室內設計大獎的優秀獎。這個獎項不僅是對我們專業能力的肯定，更激勵我們繼續為客戶提供更優質的服務。</p>
+                    <p>這個獎項展現了我們在：</p>
+                    <ul>
+                        <li>創新設計理念</li>
+                        <li>專業施工品質</li>
+                        <li>客戶服務水準</li>
+                    </ul>
+                </div>
+                <img src="https://scontent.fhkg10-1.fna.fbcdn.net/v/t39.30808-6/258823212_430466415437102_520726023367792391_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=3-7TlOQJ8-kAXNvgFto&_nc_zt=23&_nc_ht=scontent.fhkg10-1.fna&oh=00_AfAK1ONLCJqPMn0d51ZtWd4-pX-jm_pMVnmcK0bdudl_mMQ&oe=674BF2BD" 
+                     alt="2021年香港專業室內設計大獎" 
+                     class="award-image">
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2 class="section-title">我們的優勢</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>一站式服務</h3>
+                    <p>從概念設計到施工監督，提供完整的室內設計解決方案</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>成本效益</h3>
+                    <p>無實體店面的營運模式，為客戶節省更多預算</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>客戶至上</h3>
+                    <p>以客戶需求為核心，打造個性化的居住空間</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>準備開始您的設計之旅？</h2>
+            <p>立即預約免費諮詢，讓我們為您打造理想的居住空間</p>
+            <a href="https://wa.me/85255935100" class="cta-button">
+                <i class="fab fa-whatsapp"></i> 預約免費諮詢
+            </a>
+        </section>
+    </main>
+</body>
+</html>
