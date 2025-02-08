@@ -1,403 +1,460 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>關於我們 - 瀛設計工作室</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #e67e22;
-            --gold: #d4af37;
-            --text-color: #2d3748;
-            --light-bg: #f8fafc;
-            --white: #ffffff;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>關於我們 - 瀛設計工作室</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+      :root {
+          --primary-color: #2c3e50;
+          --secondary-color: #34495e;
+          --accent-color: #e67e22;
+          --gold: #d4af37;
+          --text-color: #2d3748;
+          --light-bg: #f8fafc;
+          --white: #ffffff;
+          --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
 
-        body {
-            font-family: 'Noto Sans TC', sans-serif;
-            line-height: 1.8;
-            color: var(--text-color);
-        }
+      body {
+          font-family: 'Noto Sans TC', sans-serif;
+          line-height: 1.8;
+          color: var(--text-color);
+      }
 
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(44, 62, 80, 0.7);
-            backdrop-filter: blur(10px);
-        }
+      .navbar {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          z-index: 1000;
+          background: rgba(44, 62, 80, 0.7);
+          backdrop-filter: blur(10px);
+      }
 
-        .navbar-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+      .navbar-content {
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 1rem 5%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
 
-        .logo {
-            color: var(--white);
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-decoration: none;
-        }
+      .logo {
+          color: var(--white);
+          font-size: 1.5rem;
+          font-weight: bold;
+          text-decoration: none;
+      }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
+      .nav-links {
+          display: flex;
+          gap: 2rem;
+      }
 
-        .nav-links a {
-            color: var(--white);
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
+      .nav-links a {
+          color: var(--white);
+          text-decoration: none;
+          padding: 0.5rem 1rem;
+          border-radius: 4px;
+          transition: all 0.3s ease;
+      }
 
-        .nav-links a:hover, .nav-links a.active {
-            background: rgba(255, 255, 255, 0.1);
-        }
+      .nav-links a:hover, .nav-links a.active {
+          background: rgba(255, 255, 255, 0.1);
+      }
 
-        .about-header {
-            height: 50vh;
-            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)),
-                        url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--white);
-            padding-top: 60px;
-        }
+      .about-header {
+          height: 50vh;
+          background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)),
+                      url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000');
+          background-size: cover;
+          background-position: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          color: var(--white);
+          padding-top: 60px;
+      }
 
-        .hero-content {
-            color: var(--white);
-        }
+      .hero-content {
+          color: var(--white);
+      }
 
-        .hero-title {
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
+      .hero-title {
+          font-size: 2.8rem;
+          margin-bottom: 1rem;
+          line-height: 1.2;
+      }
 
-        .hero-subtitle {
-            font-size: 1.8rem;
-            opacity: 0.9;
-        }
+      .hero-subtitle {
+          font-size: 1.8rem;
+          opacity: 0.9;
+      }
 
-        .about-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 5%;
-        }
+      .about-content {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 4rem 5%;
+      }
 
-        .about-section {
-            margin-bottom: 4rem;
-        }
+      .about-section {
+          margin-bottom: 4rem;
+      }
 
-        .award-section {
-            margin: 4rem 0;
-            background: var(--white);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
+      .award-section {
+          margin: 4rem 0;
+          background: var(--white);
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: var(--shadow);
+      }
 
-        .award-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            padding: 2rem;
-        }
+      .award-content {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 2rem;
+          padding: 2rem;
+      }
 
-        .award-info {
-            padding: 2rem;
-        }
+      .award-info {
+          padding: 2rem;
+      }
 
-        .award-info ul {
-            list-style-type: none;
-            margin: 1rem 0;
-        }
+      .award-info ul {
+          list-style-type: none;
+          margin: 1rem 0;
+      }
 
-        .award-info ul li {
-            margin: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
+      .award-info ul li {
+          margin: 0.5rem 0;
+          padding-left: 1.5rem;
+          position: relative;
+      }
 
-        .award-info ul li:before {
-            content: "•";
-            color: var(--accent-color);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
+      .award-info ul li:before {
+          content: "•";
+          color: var(--accent-color);
+          font-weight: bold;
+          position: absolute;
+          left: 0;
+      }
 
-        .award-title {
-            color: var(--gold);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
+      .award-title {
+          color: var(--gold);
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+      }
 
-        .award-title i {
-            font-size: 2rem;
-        }
+      .award-title i {
+          font-size: 2rem;
+      }
 
-        .award-image {
-    width: 100%;
-    height: 400px; /* 增加高度到 400px */
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease; /* 添加過渡效果 */
-}
+      .award-image {
+          width: 100%;
+          height: 400px; 
+          object-fit: cover;
+          border-radius: 8px;
+          box-shadow: var(--shadow);
+          transition: transform 0.3s ease; 
+      }
 
-/* 在手機版保持較小的尺寸以確保良好的觀看體驗 */
-@media (max-width: 768px) {
-    .award-image {
-        height: 300px;
-    }
-}
+      @media (max-width: 768px) {
+          .award-image {
+              height: 300px;
+          }
+      }
 
-@media (max-width: 480px) {
-    .award-image {
-        height: 250px;
-    }
-}
+      @media (max-width: 480px) {
+          .award-image {
+              height: 250px;
+          }
+      }
 
+      .section-title {
+          font-size: 2rem;
+          color: var(--primary-color);
+          margin-bottom: 1.5rem;
+          position: relative;
+          padding-bottom: 0.5rem;
+      }
 
-        .section-title {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
+      .section-title::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 60px;
+          height: 3px;
+          background: var(--accent-color);
+      }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: var(--accent-color);
-        }
+      .feature-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 2rem;
+          margin-top: 2rem;
+      }
 
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+      .feature-item {
+          background: var(--white);
+          padding: 2rem;
+          border-radius: 12px;
+          box-shadow: var(--shadow);
+          text-align: center;
+          transition: transform 0.3s ease;
+      }
 
-        .feature-item {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
+      .feature-item:hover {
+          transform: translateY(-5px);
+      }
 
-        .feature-item:hover {
-            transform: translateY(-5px);
-        }
+      .feature-icon {
+          font-size: 2.5rem;
+          color: var(--accent-color);
+          margin-bottom: 1rem;
+      }
 
-        .feature-icon {
-            font-size: 2.5rem;
-            color: var(--accent-color);
-            margin-bottom: 1rem;
-        }
+      .feature-item h3 {
+          color: var(--primary-color);
+          margin-bottom: 1rem;
+      }
 
-        .feature-item h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
+      .cta-section {
+          text-align: center;
+          margin-top: 4rem;
+          padding: 4rem 2rem;
+          background: var(--light-bg);
+          border-radius: 12px;
+      }
 
-        .cta-section {
-            text-align: center;
-            margin-top: 4rem;
-            padding: 4rem 2rem;
-            background: var(--light-bg);
-            border-radius: 12px;
-        }
+      .cta-section h2 {
+          color: var(--primary-color);
+          margin-bottom: 1rem;
+      }
 
-        .cta-section h2 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
+      .cta-button {
+          display: inline-block;
+          background: var(--accent-color);
+          color: var(--white);
+          padding: 1rem 2rem;
+          border-radius: 8px;
+          text-decoration: none;
+          margin-top: 2rem;
+          transition: all 0.3s ease;
+      }
 
-        .cta-button {
-            display: inline-block;
-            background: var(--accent-color);
-            color: var(--white);
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            margin-top: 2rem;
-            transition: all 0.3s ease;
-        }
+      .cta-button:hover {
+          background: var(--primary-color);
+          transform: translateY(-2px);
+      }
 
-        .cta-button:hover {
-            background: var(--primary-color);
-            transform: translateY(-2px);
-        }
+      .cta-button i {
+          margin-right: 0.5rem;
+      }
 
-        .cta-button i {
-            margin-right: 0.5rem;
-        }
+      .mobile-nav {
+          display: none;
+          position: absolute;
+          top: 10%;
+          right: 5%;
+          background: rgba(255, 255, 255, 0.9);
+          border-radius: 8px;
+          box-shadow: var(--shadow);
+          padding: 1rem;
+          z-index: 1001;
+      }
 
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
+      .mobile-nav a {
+          display: block;
+          color: var(--primary-color);
+          text-decoration: none;
+          padding: 0.5rem 1rem;
+          border-radius: 4px;
+          transition: background 0.3s ease;
+      }
 
-            .award-content {
-                grid-template-columns: 1fr;
-            }
+      .mobile-nav a:hover {
+          background: rgba(0, 0, 0, 0.1);
+      }
 
-            .award-image {
-                height: 250px;
-            }
+      .toggle-nav {
+          display: none;
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          cursor: pointer;
+          color: var(--white);
+          font-size: 1.5rem;
+          background: rgba(44, 62, 80, 0.7);
+          border: none;
+          border-radius: 4px;
+          padding: 0.5rem 1rem;
+          transition: background 0.3s ease;
+      }
 
-            .hero-title {
-                font-size: 2.2rem;
-            }
+      .toggle-nav:hover {
+          background: rgba(255, 255, 255, 0.1);
+      }
 
-            .hero-subtitle {
-                font-size: 1.4rem;
-            }
+      @media (max-width: 768px) {
+          .nav-links {
+              display: none;
+          }
 
-            .award-info {
-                padding: 1rem;
-            }
+          .toggle-nav {
+              display: block;
+          }
 
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+          .award-content {
+              grid-template-columns: 1fr;
+          }
 
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: 1.8rem;
-            }
+          .award-image {
+              height: 250px;
+          }
 
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
+          .hero-title {
+              font-size: 2.2rem;
+          }
 
-            .section-title {
-                font-size: 1.5rem;
-            }
+          .hero-subtitle {
+              font-size: 1.4rem;
+          }
 
-            .award-title {
-                font-size: 1.3rem;
-            }
-        }
-    </style>
+          .award-info {
+              padding: 1rem;
+          }
+
+          .feature-grid {
+              grid-template-columns: 1fr;
+          }
+      }
+
+      @media (max-width: 480px) {
+          .hero-title {
+              font-size: 1.8rem;
+          }
+
+          .hero-subtitle {
+              font-size: 1.2rem;
+          }
+
+          .section-title {
+              font-size: 1.5rem;
+          }
+
+          .award-title {
+              font-size: 1.3rem;
+          }
+      }
+  </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-content">
-            <a href="index.html" class="logo">瀛設計工作室</a>
-            <div class="nav-links">
-                <a href="index.html">首頁</a>
-                <a href="about.html" class="active">關於我們</a>
-                <a href="services.html">服務項目</a>
-                <a href="portfolio.html">作品集</a>
-                <a href="contact.html">聯絡我們</a>
-            </div>
-        </div>
-    </nav>
+  <nav class="navbar">
+      <div class="navbar-content">
+          <a href="index.html" class="logo">瀛設計工作室</a>
+          <div class="nav-links">
+              <a href="index.html">首頁</a>
+              <a href="about.html" class="active">關於我們</a>
+              <a href="services.html">服務項目</a>
+              <a href="portfolio.html">作品集</a>
+              <a href="contact.html">聯絡我們</a>
+          </div>
+          <button class="toggle-nav" onclick="document.querySelector('.mobile-nav').classList.toggle('show')">
+              ☰
+          </button>
+      </div>
+  </nav>
 
-    <header class="about-header">
-        <div class="hero-content">
-            <h1 class="hero-title">關於瀛設計</h1>
-            <p class="hero-subtitle">專業、創新、以客為本</p>
-        </div>
-    </header>
+  <header class="about-header">
+      <div class="hero-content">
+          <h1 class="hero-title">關於瀛設計</h1>
+          <p class="hero-subtitle">專業、創新、以客為本</p>
+      </div>
+  </header>
 
-    <main class="about-content">
-        <section class="about-section">
-            <h2 class="section-title">我們的理念</h2>
-            <p>瀛設計工作室致力於為客戶提供高品質、創新的室內設計解決方案。我們深信，優秀的設計不僅要美觀，更要實用、符合客戶的生活方式和需求。作為一家以客戶為中心的設計工作室，我們採用靈活的營運模式，不設實體店面，以降低營運成本，把節省下來的費用回饋給我們的客戶。</p>
-        </section>
+  <div class="mobile-nav">
+      <a href="index.html">首頁</a>
+      <a href="about.html" class="active">關於我們</a>
+      <a href="services.html">服務項目</a>
+      <a href="portfolio.html">作品集</a>
+      <a href="contact.html">聯絡我們</a>
+  </div>
 
-        <section class="award-section">
-            <div class="award-content">
-                <div class="award-info">
-                    <h2 class="award-title">
-                        <i class="fas fa-trophy"></i>
-                        2021年香港專業室內設計大獎
-                    </h2>
-                    <p>我們很榮幸能獲得2021年香港專業室內設計大獎的優秀獎。這個獎項不僅是對我們專業能力的肯定，更激勵我們繼續為客戶提供更優質的服務。</p>
-                    <p>這個獎項展現了我們在：</p>
-                    <ul>
-                        <li>創新設計理念</li>
-                        <li>專業施工品質</li>
-                        <li>客戶服務水準</li>
-                    </ul>
-                </div>
-                <img src="https://github.com/tung-128/solid_idea.github.io/blob/main/images/1.jpg?raw=true" 
-                     alt="2021年香港專業室內設計大獎" 
-                     class="award-image">
-            </div>
-        </section>
+  <main class="about-content">
+      <section class="about-section">
+          <h2 class="section-title">我們的理念</h2>
+          <p>瀛設計工作室致力於為客戶提供高品質、創新的室內設計解決方案。我們深信，優秀的設計不僅要美觀，更要實用、符合客戶的生活方式和需求。作為一家以客戶為中心的設計工作室，我們採用靈活的營運模式，不設實體店面，以降低營運成本，把節省下來的費用回饋給我們的客戶。</p>
+      </section>
 
-        <section class="about-section">
-            <h2 class="section-title">我們的優勢</h2>
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-tasks"></i>
-                    </div>
-                    <h3>一站式服務</h3>
-                    <p>從概念設計到施工監督，提供完整的室內設計解決方案</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-dollar-sign"></i>
-                    </div>
-                    <h3>成本效益</h3>
-                    <p>無實體店面的營運模式，為客戶節省更多預算</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>客戶至上</h3>
-                    <p>以客戶需求為核心，打造個性化的居住空間</p>
-                </div>
-            </div>
-        </section>
+      <section class="award-section">
+          <div class="award-content">
+              <div class="award-info">
+                  <h2 class="award-title">
+                      <i class="fas fa-trophy"></i>
+                      2021年香港專業室內設計大獎
+                  </h2>
+                  <p>我們很榮幸能獲得2021年香港專業室內設計大獎的優秀獎。這個獎項不僅是對我們專業能力的肯定，更激勵我們繼續為客戶提供更優質的服務。</p>
+                  <p>這個獎項展現了我們在：</p>
+                  <ul>
+                      <li>創新設計理念</li>
+                      <li>專業施工品質</li>
+                      <li>客戶服務水準</li>
+                  </ul>
+              </div>
+              <img src="https://github.com/tung-128/solid_idea.github.io/blob/main/images/1.jpg?raw=true" 
+                   alt="2021年香港專業室內設計大獎" 
+                   class="award-image">
+          </div>
+      </section>
 
-        <section class="cta-section">
-            <h2>準備開始您的設計之旅？</h2>
-            <p>立即預約免費諮詢，讓我們為您打造理想的居住空間</p>
-            <a href="https://wa.me/85255935100" class="cta-button">
-                <i class="fab fa-whatsapp"></i> 預約免費諮詢
-            </a>
-        </section>
-    </main>
+      <section class="about-section">
+          <h2 class="section-title">我們的優勢</h2>
+          <div class="feature-grid">
+              <div class="feature-item">
+                  <div class="feature-icon">
+                      <i class="fas fa-tasks"></i>
+                  </div>
+                  <h3>一站式服務</h3>
+                  <p>從概念設計到施工監督，提供完整的室內設計解決方案</p>
+              </div>
+              <div class="feature-item">
+                  <div class="feature-icon">
+                      <i class="fas fa-dollar-sign"></i>
+                  </div>
+                  <h3>成本效益</h3>
+                  <p>無實體店面的營運模式，為客戶節省更多預算</p>
+              </div>
+              <div class="feature-item">
+                  <div class="feature-icon">
+                      <i class="fas fa-heart"></i>
+                  </div>
+                  <h3>客戶至上</h3>
+                  <p>以客戶需求為核心，打造個性化的居住空間</p>
+              </div>
+          </div>
+      </section>
+
+      <section class="cta-section">
+          <h2>準備開始您的設計之旅？</h2>
+          <p>立即預約免費諮詢，讓我們為您打造理想的居住空間</p>
+          <a href="https://wa.me/85255935100" class="cta-button">
+              <i class="fab fa-whatsapp"></i> 預約免費諮詢
+          </a>
+      </section>
+  </main>
 </body>
 </html>
